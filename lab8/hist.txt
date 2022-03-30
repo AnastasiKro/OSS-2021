@@ -1,0 +1,24 @@
+    1  ldd /bin/login | grep pam
+    2  ls -l /lib64/libpam*
+    3  ls -l /lib64/security/
+    4  vi /etc/pam.d/system-auth
+    5  vi /etc/pam.d/su
+    6  chmod +w /etc/pam.d/su
+    7  sudo chmod +w /etc/pam.d/su
+    8  vi /etc/pam.d/su
+    9  ls -l /etc/pam.d/
+   10  sudo chmod ugo+rw /etc/pam.d/su
+   11  ls -l /etc/pam.d/
+   12  vi /etc/pam.d/su
+   13  su -c "hostname mephi"
+   14  su -c 'mc' "hostname mephi"
+   15  vi /etc/pam.d/su
+   16  su -c "hostname mephi"
+   17  vi /etc/pam.d/su
+   18  groups
+   19  id
+   20  useradd -G wheel user1
+   21  useradd -G wheel user2
+   22  sudo useradd -G wheel user2
+   23  sudo passwd user2
+   24  history > hist.txt
