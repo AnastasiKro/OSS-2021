@@ -1,38 +1,60 @@
-  960  groups
-  961  sudo chmod ugo+rw /etc/pam.d/login
-  962  vim ugo+rw /etc/pam.d/login
-  963  vim /etc/pam.d/login
-  964  mkdir lab8
-  965  sudo chmod ugo+rw /etc/securetty 
-  966  cp /etc/securetty lab8/
-  967  ls lab8/
-  968  vim /etc/securetty
-  969  cat lab8/securetty > /etc/securetty 
-  970  vim /etc/securetty
-  971  man pam_pwquality
-  972  sudo chmod ugo+rw /etc/security/pwquality.conf 
-  973  vim /etc/security/pwquality.conf 
-  974  sudo chmod ugo+rw /etc/pam.d/system-auth
-  975  vim /etc/pam.d/system-auth
-  976  man pam_limits
-  977  sudo chmod ugo+rw /etc/security/limits.conf 
-  978  vim /etc/security/limits.conf 
-  979  history > /lab8/lab8hist.md
-  980  history > lab8history.txt
-  981  vim /etc/security/limits.conf 
-  982  cd lab8
-  983  gcc check_user.c -o check_user -lpam -lpam_misc
-  984  cd ../
-  985  vim /etc/pam.d/check
-  986  sudo chmod +rwx /etc/pam.d
-  987  vim /etc/pam.d/check
-  988  cd lab8
-  989  vim check_user.c 
-  990  gcc check_user.c -o check_user -lpam -lpam_misc
-  995  ./check_user
-  996  ./check_user avtobus
-  997  ./check_user user2
-  998  vim check_user.c 
-  999  ./check_user user2
- 1000  ./check_user avtobus
- 1001  history > lab8_history
+    1  ldd /bin/login | grep pam
+    2  ls -l /lib64/libpam*
+    3  ls -l /lib64/security/
+    4  vi /etc/pam.d/system-auth
+    5  vi /etc/pam.d/su
+    6  chmod +w /etc/pam.d/su
+    7  sudo chmod +w /etc/pam.d/su
+    8  vi /etc/pam.d/su
+    9  ls -l /etc/pam.d/
+   10  sudo chmod ugo+rw /etc/pam.d/su
+   11  ls -l /etc/pam.d/
+   12  vi /etc/pam.d/su
+   13  su -c "hostname mephi"
+   14  su -c 'mc' "hostname mephi"
+   15  vi /etc/pam.d/su
+   16  su -c "hostname mephi"
+   17  vi /etc/pam.d/su
+   18  groups
+   19  id
+   20  useradd -G wheel user1
+   21  useradd -G wheel user2
+   22  sudo useradd -G wheel user2
+   23  sudo passwd user2groups
+   24  sudo chmod ugo+rw /etc/pam.d/login
+   25  vim ugo+rw /etc/pam.d/login
+   26  vim /etc/pam.d/login
+   27  mkdir lab8
+   28  sudo chmod ugo+rw /etc/securetty 
+   29  cp /etc/securetty lab8/
+   30  ls lab8/
+   31  vim /etc/securetty
+   32  cat lab8/securetty > /etc/securetty 
+   33  vim /etc/securetty
+   34  man pam_pwquality
+   35  sudo chmod ugo+rw /etc/security/pwquality.conf 
+   36  vim /etc/security/pwquality.conf 
+   37  sudo chmod ugo+rw /etc/pam.d/system-auth
+   38  vim /etc/pam.d/system-auth
+   39  man pam_limits
+   40  sudo chmod ugo+rw /etc/security/limits.conf 
+   41  vim /etc/security/limits.conf 
+   42  history > /lab8/lab8hist.md
+   43  history > lab8history.txt
+   44  vim /etc/security/limits.conf 
+   45  cd lab8
+   46  gcc check_user.c -o check_user -lpam -lpam_misc
+   47  cd ../
+   48  vim /etc/pam.d/check
+   49  sudo chmod +rwx /etc/pam.d
+   50  vim /etc/pam.d/check
+   51  cd lab8
+   52  vim check_user.c 
+   53  gcc check_user.c -o check_user -lpam -lpam_misc
+   54  ./check_user
+   55  ./check_user avtobus
+   56  ./check_user user2
+   57  vim check_user.c 
+   58  ./check_user user2
+   58  ./check_user avtobus
+   59  history > lab8_history
