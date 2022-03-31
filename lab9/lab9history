@@ -1,0 +1,19 @@
+    5  ps xaf
+    6  ps xawf -eo pid,user,cgroup,args
+    7  systemd-cgls
+    8  ls -l /usr/lib/systemd/system/
+    9  ls -l /run/systemd/system/
+   10  ls -l /etc/systemd/system
+   11  systemctl -t help
+   12  systemctl status
+   13  systemctl --type=service
+   14  systemctl status chronyd.service
+   15  systemctl is-active chronyd.service
+   16  systemctl is-enabled chronyd.service
+   17  systemctl list-dependencies --after chronyd.service
+   18  systemctl list-units --type=service
+   19  systemctl list-units --type=service --all
+   20  systemctl list-units --type=socket --all
+   21  systemctl list-unit-files --type=service
+   22  systemctl --failed --type=service
+   23  history > lab9history

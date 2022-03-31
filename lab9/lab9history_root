@@ -1,0 +1,21 @@
+    1  systemctl status httpd.service
+    2  yum update -y
+    3  systemctl status httpd.service
+    4  yum install httpd -y
+    5  systemctl status httpd.service
+    6  systemctl start httpd.service
+    7  systemctl status httpd.service
+    8  systemctl restart httpd.service
+    9  systemctl status httpd.service
+   10  systemctl stop httpd.service
+   11  systemctl enable httpd.service
+   12  systemctl status httpd.service
+   13  systemctl start httpd.service
+   14  systemctl status httpd.service
+   15  systemctl disable httpd.service
+   16  systemctl status httpd.service
+   17  systemctl mask httpd.service
+   18  systemctl status httpd.service
+   19  systemctl start httpd.service
+   20  systemctl unmask httpd.service
+   21  history > lab9history_root
