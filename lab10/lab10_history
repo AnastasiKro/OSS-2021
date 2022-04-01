@@ -143,7 +143,4 @@
   146  sudo systemctl start httpd.service
   147  yum repolist
   148  sudo yum install c-b19-515-10 b19-515-10
-  149  sudo yum install -y httpd
-  150  history > lab10_history
-  151  cd ~/
-  152  history > lab10_history
+  149  history > lab10_history
