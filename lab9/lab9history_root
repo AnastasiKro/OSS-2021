@@ -18,4 +18,16 @@
    18  systemctl status httpd.service
    19  systemctl start httpd.service
    20  systemctl unmask httpd.service
+   21  systemctl poweroff
+   22  systemclt halt
+   23  systemctl --no-wall poweroff
+   24  shutdown --poweroff 17:00
+   25  shutdown --halt +1
+   26  shutdown -c
+   27  systemctl --no-wall reboot
+   28  systemctl suspend
+   29  systemctl hibernate
+   30  man systemd
+   31  systemd --dump-core
+   32  
    21  history > lab9history_root
