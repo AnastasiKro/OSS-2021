@@ -1,0 +1,8 @@
+    4  hostnamectl
+    5  timedatectl
+    6  localectl
+    7  loginctl
+    8  loginctl session-status 2
+    9  loginctl show-user user2
+   10  loginctl show-user avtobus
+   11  history > lab9.txt
