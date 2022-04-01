@@ -1,0 +1,149 @@
+    4  yum repolist
+    5  yum grouplist
+    6  rpm -qa| list
+    7  rpm -qa| less
+    8  rpm -qa| wc -l
+    9  yum list installed | less
+   10  rpm -qa | grep gnuplot
+   11  yum search gnuplot
+   12  yum info gnuplot
+   13  sudo yum install gnuplot
+   14  rpm -qi gnuplot
+   15  yum list installed gnuplot
+   16  rpm -ql gnuplot
+   17  rpm -qf /usr/bin/gnuplot-wx
+   18  yum deplist gnuplot
+   19  sudo rpm -e gnuplot-common
+   20  sudo yum remove gnuplot-common
+   21  vim /etc/yum.repos.d/yandex.repo
+   22  su
+   23  sudo yum clean all
+   24  sudo yum repolist yandex
+   25  sudo yum install @development-tools rpmdev* rpm-sign
+   26  cd
+   27  rpmdev-setuptree
+   28  ls
+   29  cd ~/rpmbuild/SOURCES/
+   30  mkdir 515-10-1.0
+   31  cd 515-10-1.0/
+   32  cd ../
+   33  mkdir b19-515-10-1.0
+   34  rmdir 515-10-1.0
+   35  cd b19-515-10-1.0/
+   36  vim b19-515-10
+   37  sudo chmod +x b19-515-10 
+   38  ./b19-515-10 
+   39  cd ../
+   40  tar -cvzf b19-515-10-1.0.tar.gz b19-515-10-1.0
+   41  cd ../SPECS/
+   42  vim b19-515-10.spec 
+   43  rpmbuild -ba b19-515-10.spec 
+   44  ls
+   45  cd ../RPMS/
+   46  ls
+   47  cd noarch
+   48  ls
+   49  rm b19-515-10-1.0-1.el7.noarch.rpm 
+   50  cd ../../SOURCES/
+   51  vim b19-515-10-1.0
+   52  cd b19-515-10-1.0/
+   53  vim b19-515-10 
+   54  cd ../../SPECS/
+   55  rpmbuild -ba b19-515-10.spec 
+   56  cd ../RPMS/noarch/
+   57  ls
+   58  cd ~/rpmbuild/SOURCES/
+   59  mkdir c-b19-515-10-1.0
+   60  cd c-b19-515-10-1.0/
+   61  vim b19-515-10.c
+   62  cd ../
+   63  tar cvfg c-b19-515-10-1.0.tar.gz c-b19-515-10-1.0
+   64  tar cvfz c-b19-515-10-1.0.tar.gz c-b19-515-10-1.0
+   65  cd ../SPECS/
+   66  vim c-b19-515-10.spec 
+   67  rpmbuild -ba c-b19-515-10.spec 
+   68  vim c-b19-515-10.spec 
+   69  rpmbuild -ba c-b19-515-10.spec 
+   70  ls ../SOURCES/c-b19-515-10-1.0
+   71  vim c-b19-515-10.spec 
+   72  vim ../SOURCES/c-b19-515-10-1.0/b19-515-10.c 
+   73  ls ../SOURCES/c-b19-515-10-1.0
+   74  vim ../SOURCES/c-b19-515-10-1.0/b19-515-10.c 
+   75  ls
+   76  cp c-b19-515-10.c ../SOURCES/c-b19-515-10-1.0/
+   77  rm ../SOURCES/c-b19-515-10-1.0/b19-515-10.c 
+   78  rm c-b19-515-10.c
+   79  rpmbuild -ba c-b19-515-10.spec 
+   80  cd ../SOURCES/c-b19-515-10-1.0/
+   81  ls
+   82  cd ../../SPECS/
+   83  ls
+   84  rpmbuild -ba c-b19-515-10.spec 
+   85  vim c-b19-515-10.spec 
+   86  rpmbuild -ba c-b19-515-10.spec 
+   87  cd ../SOURCES/c-b19-515-10-1.0/
+   88  ls
+   89  vim c-b19-515-10.c 
+   90  cd ../
+   91  cd ../SPECS/
+   92  vim c-b19-515-10.spec 
+   93  cd ../BUILD
+   94  ls
+   95  cd c-b19-515-10-1.0/
+   96  ls
+   97  vim b19-515-10.c 
+   98  ls
+   99  rm b19-515-10.c 
+  100  cd ../../SPECS/
+  101  rpmbuild -ba c-b19-515-10.spec 
+  102  cd ../BUILD
+  103  ls
+  104  cd c-b19-515-10-1.0/
+  105  ls
+  106  rm b19-515-10.c 
+  107  ls
+  108  cd ../../SOURCES/c-b19-515-10-1.0/
+  109  vim c-b19-515-10.c 
+  110  rm c-b19-515-10.c 
+  111  ls
+  112  vim c-b19-515-10.c
+  113  ls
+  114  cd ../
+  115  tar cvfz c-b19-515-10-1.0.tar.gz c-b19-515-10-1.0
+  116  cd ../SPECS/
+  117  ls
+  118  rpmbuild -ba c-b19-515-10.spec 
+  119  cd ../SRPMS/
+  120  ls
+  121  gpg2 --gen-key Kropoa Anastasiia
+  122  cd ~/.gnupg/
+  123  ls
+  124  gpg2 --gen-key
+  125  sudo yum install haveged
+  126  sudo systemctl enable haveged
+  127  sudo systemctl start haveged
+  128  gpg2 --gen-key
+  129  gpg2 --export -a 'Kropova Anastasiia' > ~/rpmbuildRPM-GPG-KEY-Kropova-Anastasiia
+  130  vim ~/.rpmmacros
+  131  rpm --addsign ~/rpmbuild/RPMS/*/*.rpm
+  132  sudo yum install createrepo
+  133  sudo mkdir -p /var/www/html/myrepo
+  134  sudo cp ~/rpmbuild/RPMS/*/*.rpm /var/www/html/myrepo
+  135  sudo cp ~/rpmbuild/RPM-GPG-KEY-Kropova-Anastasiia /var/www/html/myrepo
+  136  gpg2 --export -a 'Kropova Anastasiia' > ~/rpmbuild/RPM-GPG-KEY-Kropova-Anastasiia
+  137  sudo cp ~/rpmbuild/RPM-GPG-KEY-Kropova-Anastasiia /var/www/html/myrepo
+  138  sudo createrepo -v /var/www/html/myrepo
+  139  cd /etc/yum.repos.d/
+  140  touch my.repo
+  141  sudo touch my.repo
+  142  sudo chmod ugo+rw my.repo
+  143  vim my.repo 
+  144  sudo yum install -y httpd
+  145  sudo systemctl enable httpd.service
+  146  sudo systemctl start httpd.service
+  147  yum repolist
+  148  sudo yum install c-b19-515-10 b19-515-10
+  149  sudo yum install -y httpd
+  150  history > lab10_history
+  151  cd ~/
+  152  history > lab10_history
