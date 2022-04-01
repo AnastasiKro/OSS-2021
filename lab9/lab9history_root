@@ -29,5 +29,17 @@
    29  systemctl hibernate
    30  man systemd
    31  systemd --dump-core
-   32  
-   21  history > lab9history_root
+   32  vim mephi.service
+   33  ls -lZ mephi.service
+   34  journalctl -b
+   35  ausearch -m avc -ts recent
+   36  restorecon -v mephi.service
+   37  systemctl start mephi.service
+   38  journalctl -u mephi.service
+   39  cat mephi.path
+   40  vim mephi.path
+   41  systemctl enable mephi.path
+   42  systemctl start mephi.path
+   43  touch /tmp/mephi.file
+   44  journalctl -f -u mephi
+   45  history > lab9history_root
