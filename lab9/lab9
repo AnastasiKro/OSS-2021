@@ -1,0 +1,55 @@
+    1  cat mephi.service
+    2  vim mephi.service
+    3  ls -lZ mephi.service
+    4  ls
+    5  jornalctl -b
+    6  journalctl -b
+    7  ausearch -m avc -ts recent
+    8  restorecon -v mephi.service 
+    9  systemctl start mephi.service
+   10  vim mephi.service
+   11  systemctl start mephi.service
+   12  vim mephi.service
+   13  cp mephi.service ../
+   14  cd ../
+   15  systemctl start mephi.service
+   16  vim mephi.service
+   17  cd lab8/
+   18  vim mephi.service 
+   19  cp mephi.service /usr/bin/
+   20  cd /usr/bin
+   21  systemctl start mephi.service
+   22  vim mephi.service 
+   23  systemctl start mephi.service
+   24  vim mephi.path
+   25  systemctl enable mephi.path
+   26  cp mephi.path /usr/lib/systemd/system/
+   27  cp mephi.service /usr/lib/systemd/system/
+   28  cd /usr/lib/systemd/system/
+   29  systemctl start mephi.service
+   30  journalctl -b
+   31  journalctl -u mephi.service
+   32  vim mephi.service 
+   33  cd /usr/bin/
+   34  ls
+   35  cd /usr/lib/systemd/system/
+   36  ls
+   37  journalctl -u mephi.service
+   38  systemctl start mephi.service
+   39  systemctl stop mephi.service
+   40  systemctl daemon-reload
+   41  systemctl stop mephi.service
+   42  systemctl start mephi.service
+   43  journalctl -u mephi.service
+   44  systemctl enable mephi.path
+   45  systemctl start mephi.path
+   46  touch /tmp/mephi.file
+   47  journalctl -f -u mephi
+   48  systemctl stop mephi.path
+   49  systemctl stop mephi.service
+   50  history > ~/lab8/history_lab9
+   51  cd ~
+   52  ls
+   53  history > lab9
+   54  cd /home/avtobus
+   55  history > lab9
