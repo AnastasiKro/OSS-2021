@@ -1,0 +1,28 @@
+   1   file: /etc/passwd
+   2   netstat -tnlpZ
+   3   seinfo
+   4   seinfo -cfile -x
+   5   seinfo --class | grep file
+   6   seinfo --class file -x
+   7   seinfo --common file -x
+   8   seinfo -cdir -x
+   9   seinfo --class dir -x
+   10  seinfo -cblk_file -x
+   11  seinfo --class blk_file -x
+   12  seinfo -cchr_file -x
+   13  seinfo --class chr_file -x
+   14  seinfo -clnk_file -x
+   15  seinfo --class lnk_file -x
+   16  seinfo -cfifo_file -x
+   17  seinfo --class fifo_file -x
+   18  seinfo -csock_file -x
+   19  seinfo --class sock_file -x
+   20  seinfo -cfilesystem -x
+   21  seinfo --class filesystem -x
+   22  sesearch -A -s passwd_t -t passwd_exec_t -c file
+   23  sesearch -A -s unconfined_t -t passwd_exec_t -c file
+   24  sesearch -A -s unconfined_t -t passwd_t -c process
+   25  sesearch --type_trans -s unconfined_t -t passwd_exec_t
+   26  ausearch -m avc -ts recent
+   27  seinfo | grep -E '(dontaudit|allow)'
+   28  history > lab12_history_root
