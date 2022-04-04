@@ -1,7 +1,7 @@
     1  ldd /bin/ls | grep selinux
     2  ls -l /etc/selinux/
     3  ls -l  /etc/selinux/targeted/
-    4  id -Z
+    4  id -Z 
     5  ls -Z /etc/passwd /etc/group /etc/shadow
     6  ls -Z /etc/login.defs /etc/sudoers
     7  ls -Z /usr/bin/passwd
