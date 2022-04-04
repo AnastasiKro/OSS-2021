@@ -1,0 +1,35 @@
+    1  ldd /bin/ls | grep selinux
+    2  ls -l /etc/selinux/
+    3  ls -l  /etc/selinux/targeted/
+    4  id -Z
+    5  ls -Z /etc/passwd /etc/group /etc/shadow
+    6  ls -Z /etc/login.defs /etc/sudoers
+    7  ls -Z /usr/bin/passwd
+    8  ls -Z /usr/sbin/useradd
+    9  getfattr -n security.selinux /etc/passwd
+   10  ps Zaux
+   11  ls /proc/$$/attr
+   12  ps Z $(pgrep passwd)
+   13  sestatus
+   14  getenforce
+   15  cat /sys/fs/selinux/enforce
+   16  suddo chmod ugo+rw /etc/selinux/config
+   17  sudo vim /etc/selinux/config
+   18  sudo reboot 
+   19  getenforce
+   20  vim /etc/selinux/config
+   21  reboot
+   22  getenforce
+   23  vim /eyc/selinux/config
+   24  reboot
+   25  getenforce
+   26  setenforce 1
+   27  sudo bash -c 'echo hello > /sys/fs/selinux/enforce'
+   28  getenforce
+   29  cat /boot/config-3.10.0-1160.59.1.el7.x86_64|grep CONFIG_SECURITY_SELINUX
+   30  getsebool -a | grep httpd  
+   31  grep 'httpd_.*_t' /etc/selinux/targeted/contexts/files/file_context
+   32  sesearch -T -s httpd_t -t var_log_t
+   33  sesearch -T -s httpd_t -t tmp_t
+   34  sesearch --allow --source passwd_t --target shadow_t --class file
+   35  history > lab12_history
