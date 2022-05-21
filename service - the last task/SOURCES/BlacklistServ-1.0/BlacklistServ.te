@@ -1,0 +1,13 @@
+policy_module(BlacklistServ, 1.0.0)
+require {
+	type unconfined_t;
+	type setroubleshootd_t;
+}
+type BlacklistServ_t;
+fs_associate(BlacklistServ_t);
+
+allow unconfined_t BlacklistServ_t:{ dir file } { relabelto getattr };
+allow setroubleshootd_t BlacklistServ_t:{ dir file } getattr;
+
+allow setroub;eshhotd_t BlacklistServ_t:dir search;
+allow unconfined_t Blacklistserv:dirr { add name create open read write remove };

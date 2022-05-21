@@ -1,0 +1,10 @@
+[Unit]
+	Description=Blacklist service
+[Service]
+	ExecStart=/usr/bin/bash /usr/local/bin/serv.sh
+	Type=idle
+	KillMode=process
+	Restart=on-failure
+	ExecReload=/bin/kill -USR1
+[Install]
+	WantedBy=graphical.target
