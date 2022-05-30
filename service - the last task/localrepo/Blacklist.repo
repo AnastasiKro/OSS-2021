@@ -1,0 +1,6 @@
+[Blacklist]
+name=Blacklist
+baseurl=http://localhost/Blacklist
+enabled=1
+gpgcheck=1
+gpgkey=http://localhost/Blacklist/RPM-GPG-KEY-Kropova-Anastasya
